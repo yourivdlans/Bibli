@@ -1,9 +1,27 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model name="Test1.xcdatamodel" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
-    <entity name="Event">
-        <attribute name="timeStamp" optional="YES" attributeType="Date"/>
+<model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1810" systemVersion="12C54" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Enemies" representedClassName="Enemies" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="level" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Levels" inverseName="enemies" inverseEntity="Levels" syncable="YES"/>
+    </entity>
+    <entity name="Games" representedClassName="Games" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="worlds" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Worlds" inverseName="game" inverseEntity="Worlds" syncable="YES"/>
+    </entity>
+    <entity name="Levels" representedClassName="Levels" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="enemies" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Enemies" inverseName="level" inverseEntity="Enemies" syncable="YES"/>
+        <relationship name="world" optional="YES" minCount="1" maxCount="1" deletionRule="Cascade" destinationEntity="Worlds" inverseName="levels" inverseEntity="Worlds" syncable="YES"/>
+    </entity>
+    <entity name="Worlds" representedClassName="Worlds" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="game" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Games" inverseName="worlds" inverseEntity="Games" syncable="YES"/>
+        <relationship name="levels" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Levels" inverseName="world" inverseEntity="Levels" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Event" positionX="261" positionY="189" width="128" height="60"/>
+        <element name="Enemies" positionX="169" positionY="213" width="128" height="73"/>
+        <element name="Games" positionX="151" positionY="-396" width="128" height="73"/>
+        <element name="Levels" positionX="135" positionY="-18" width="128" height="88"/>
+        <element name="Worlds" positionX="153" positionY="-207" width="128" height="88"/>
     </elements>
 </model>

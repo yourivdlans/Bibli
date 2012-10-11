@@ -1,8 +1,8 @@
 //
-//  MasterViewController.h
+//  WorldViewController.h
 //  Bibli2
 //
-//  Created by Youri van der Lans on 10/5/12.
+//  Created by Youri van der Lans on 10/9/12.
 //  Copyright (c) 2012 Youri van der Lans. All rights reserved.
 //
 
@@ -10,14 +10,14 @@
 
 #import <CoreData/CoreData.h>
 
-#import "WorldViewController.h"
+#import "NewWorldViewController.h"
 #import "Games.h"
 
-@interface MasterViewController : UITableViewController <NSFetchedResultsControllerDelegate>
+@interface WorldViewController : UITableViewController <NSFetchedResultsControllerDelegate>
 
 @property (strong, nonatomic) NSFetchedResultsController *fetchedResultsController;
 @property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 
-@property (strong, nonatomic) Games *selectedGame;
+@property (strong, nonatomic) Games *game;
 
 @end

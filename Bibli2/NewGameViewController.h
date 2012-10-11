@@ -1,5 +1,5 @@
 //
-//  MasterViewController.h
+//  NewGameViewController.h
 //  Bibli2
 //
 //  Created by Youri van der Lans on 10/5/12.
@@ -10,14 +10,19 @@
 
 #import <CoreData/CoreData.h>
 
-#import "WorldViewController.h"
 #import "Games.h"
 
-@interface MasterViewController : UITableViewController <NSFetchedResultsControllerDelegate>
+@interface NewGameViewController : UIViewController <UITextFieldDelegate, NSFetchedResultsControllerDelegate>
+{
+    UITextField *gameTextField;
+}
 
 @property (strong, nonatomic) NSFetchedResultsController *fetchedResultsController;
 @property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 
-@property (strong, nonatomic) Games *selectedGame;
+@property (nonatomic, retain) IBOutlet UITextField *gameTextField;
+
+- (void)dismissKeyboard;
+- (IBAction)insertNewGame:(id)sender;
 
 @end

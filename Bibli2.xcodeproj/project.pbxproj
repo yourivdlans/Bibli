@@ -7,12 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DA344366162423A100AF07DD /* WorldViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA344365162423A100AF07DD /* WorldViewController.m */; };
+		DA34436A162426AC00AF07DD /* NewWorldViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA344369162426AC00AF07DD /* NewWorldViewController.m */; };
 		DA79C349161EEBCD00F4D2AC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA79C348161EEBCD00F4D2AC /* UIKit.framework */; };
 		DA79C34B161EEBCD00F4D2AC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA79C34A161EEBCD00F4D2AC /* Foundation.framework */; };
 		DA79C34D161EEBCD00F4D2AC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA79C34C161EEBCD00F4D2AC /* CoreGraphics.framework */; };
 		DA79C34F161EEBCD00F4D2AC /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA79C34E161EEBCD00F4D2AC /* CoreData.framework */; };
 		DA79C355161EEBCD00F4D2AC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DA79C353161EEBCD00F4D2AC /* InfoPlist.strings */; };
-		DA79C357161EEBCD00F4D2AC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DA79C356161EEBCD00F4D2AC /* main.m */; };
 		DA79C35B161EEBCD00F4D2AC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DA79C35A161EEBCD00F4D2AC /* AppDelegate.m */; };
 		DA79C35D161EEBCD00F4D2AC /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = DA79C35C161EEBCD00F4D2AC /* Default.png */; };
 		DA79C35F161EEBCD00F4D2AC /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DA79C35E161EEBCD00F4D2AC /* Default@2x.png */; };
@@ -21,9 +22,19 @@
 		DA79C367161EEBCD00F4D2AC /* Bibli2.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DA79C365161EEBCD00F4D2AC /* Bibli2.xcdatamodeld */; };
 		DA79C36A161EEBCD00F4D2AC /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA79C369161EEBCD00F4D2AC /* MasterViewController.m */; };
 		DA79C36D161EEBCD00F4D2AC /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA79C36C161EEBCD00F4D2AC /* DetailViewController.m */; };
+		DA79C375161EEE9700F4D2AC /* NewGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA79C374161EEE9700F4D2AC /* NewGameViewController.m */; };
+		DAAC2F9C1626C6B60034B2C0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DAAC2F9B1626C6B60034B2C0 /* main.m */; };
+		DAAC2FA81626DFCD0034B2C0 /* Levels.m in Sources */ = {isa = PBXBuildFile; fileRef = DAAC2FA71626DFCC0034B2C0 /* Levels.m */; };
+		DAAC2FAB1626DFCD0034B2C0 /* Worlds.m in Sources */ = {isa = PBXBuildFile; fileRef = DAAC2FAA1626DFCD0034B2C0 /* Worlds.m */; };
+		DAAC2FAE1626DFCD0034B2C0 /* Enemies.m in Sources */ = {isa = PBXBuildFile; fileRef = DAAC2FAD1626DFCD0034B2C0 /* Enemies.m */; };
+		DAAC2FB11626DFCD0034B2C0 /* Games.m in Sources */ = {isa = PBXBuildFile; fileRef = DAAC2FB01626DFCD0034B2C0 /* Games.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DA344364162423A100AF07DD /* WorldViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WorldViewController.h; sourceTree = "<group>"; };
+		DA344365162423A100AF07DD /* WorldViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WorldViewController.m; sourceTree = "<group>"; };
+		DA344368162426AC00AF07DD /* NewWorldViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewWorldViewController.h; sourceTree = "<group>"; };
+		DA344369162426AC00AF07DD /* NewWorldViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewWorldViewController.m; sourceTree = "<group>"; };
 		DA79C344161EEBCD00F4D2AC /* Bibli2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bibli2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA79C348161EEBCD00F4D2AC /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		DA79C34A161EEBCD00F4D2AC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -31,7 +42,6 @@
 		DA79C34E161EEBCD00F4D2AC /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		DA79C352161EEBCD00F4D2AC /* Bibli2-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Bibli2-Info.plist"; sourceTree = "<group>"; };
 		DA79C354161EEBCD00F4D2AC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		DA79C356161EEBCD00F4D2AC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		DA79C358161EEBCD00F4D2AC /* Bibli2-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bibli2-Prefix.pch"; sourceTree = "<group>"; };
 		DA79C359161EEBCD00F4D2AC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		DA79C35A161EEBCD00F4D2AC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -44,6 +54,17 @@
 		DA79C369161EEBCD00F4D2AC /* MasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
 		DA79C36B161EEBCD00F4D2AC /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		DA79C36C161EEBCD00F4D2AC /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		DA79C373161EEE9700F4D2AC /* NewGameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewGameViewController.h; sourceTree = "<group>"; };
+		DA79C374161EEE9700F4D2AC /* NewGameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewGameViewController.m; sourceTree = "<group>"; };
+		DAAC2F9B1626C6B60034B2C0 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		DAAC2FA61626DFCC0034B2C0 /* Levels.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Levels.h; sourceTree = "<group>"; };
+		DAAC2FA71626DFCC0034B2C0 /* Levels.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Levels.m; sourceTree = "<group>"; };
+		DAAC2FA91626DFCD0034B2C0 /* Worlds.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Worlds.h; sourceTree = "<group>"; };
+		DAAC2FAA1626DFCD0034B2C0 /* Worlds.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Worlds.m; sourceTree = "<group>"; };
+		DAAC2FAC1626DFCD0034B2C0 /* Enemies.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Enemies.h; sourceTree = "<group>"; };
+		DAAC2FAD1626DFCD0034B2C0 /* Enemies.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Enemies.m; sourceTree = "<group>"; };
+		DAAC2FAF1626DFCD0034B2C0 /* Games.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Games.h; sourceTree = "<group>"; };
+		DAAC2FB01626DFCD0034B2C0 /* Games.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Games.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,7 +120,21 @@
 				DA79C369161EEBCD00F4D2AC /* MasterViewController.m */,
 				DA79C36B161EEBCD00F4D2AC /* DetailViewController.h */,
 				DA79C36C161EEBCD00F4D2AC /* DetailViewController.m */,
+				DA344364162423A100AF07DD /* WorldViewController.h */,
+				DA344365162423A100AF07DD /* WorldViewController.m */,
+				DA79C373161EEE9700F4D2AC /* NewGameViewController.h */,
+				DA79C374161EEE9700F4D2AC /* NewGameViewController.m */,
+				DA344368162426AC00AF07DD /* NewWorldViewController.h */,
+				DA344369162426AC00AF07DD /* NewWorldViewController.m */,
 				DA79C365161EEBCD00F4D2AC /* Bibli2.xcdatamodeld */,
+				DAAC2FAF1626DFCD0034B2C0 /* Games.h */,
+				DAAC2FB01626DFCD0034B2C0 /* Games.m */,
+				DAAC2FAC1626DFCD0034B2C0 /* Enemies.h */,
+				DAAC2FAD1626DFCD0034B2C0 /* Enemies.m */,
+				DAAC2FA91626DFCD0034B2C0 /* Worlds.h */,
+				DAAC2FAA1626DFCD0034B2C0 /* Worlds.m */,
+				DAAC2FA61626DFCC0034B2C0 /* Levels.h */,
+				DAAC2FA71626DFCC0034B2C0 /* Levels.m */,
 				DA79C351161EEBCD00F4D2AC /* Supporting Files */,
 			);
 			path = Bibli2;
@@ -108,9 +143,9 @@
 		DA79C351161EEBCD00F4D2AC /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				DAAC2F9B1626C6B60034B2C0 /* main.m */,
 				DA79C352161EEBCD00F4D2AC /* Bibli2-Info.plist */,
 				DA79C353161EEBCD00F4D2AC /* InfoPlist.strings */,
-				DA79C356161EEBCD00F4D2AC /* main.m */,
 				DA79C358161EEBCD00F4D2AC /* Bibli2-Prefix.pch */,
 				DA79C35C161EEBCD00F4D2AC /* Default.png */,
 				DA79C35E161EEBCD00F4D2AC /* Default@2x.png */,
@@ -185,11 +220,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DA79C357161EEBCD00F4D2AC /* main.m in Sources */,
 				DA79C35B161EEBCD00F4D2AC /* AppDelegate.m in Sources */,
 				DA79C367161EEBCD00F4D2AC /* Bibli2.xcdatamodeld in Sources */,
 				DA79C36A161EEBCD00F4D2AC /* MasterViewController.m in Sources */,
 				DA79C36D161EEBCD00F4D2AC /* DetailViewController.m in Sources */,
+				DA79C375161EEE9700F4D2AC /* NewGameViewController.m in Sources */,
+				DA344366162423A100AF07DD /* WorldViewController.m in Sources */,
+				DA34436A162426AC00AF07DD /* NewWorldViewController.m in Sources */,
+				DAAC2F9C1626C6B60034B2C0 /* main.m in Sources */,
+				DAAC2FA81626DFCD0034B2C0 /* Levels.m in Sources */,
+				DAAC2FAB1626DFCD0034B2C0 /* Worlds.m in Sources */,
+				DAAC2FAE1626DFCD0034B2C0 /* Enemies.m in Sources */,
+				DAAC2FB11626DFCD0034B2C0 /* Games.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -305,6 +347,7 @@
 				DA79C372161EEBCD00F4D2AC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

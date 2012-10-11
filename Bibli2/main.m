@@ -2,7 +2,7 @@
 //  main.m
 //  Bibli2
 //
-//  Created by Youri van der Lans on 10/5/12.
+//  Created by Youri van der Lans on 10/11/12.
 //  Copyright (c) 2012 Youri van der Lans. All rights reserved.
 //
 
