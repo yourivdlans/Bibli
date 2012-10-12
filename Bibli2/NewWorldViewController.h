@@ -13,12 +13,11 @@
 #import "Games.h"
 #import "Worlds.h"
 
-@interface NewWorldViewController : UIViewController <UITextFieldDelegate, NSFetchedResultsControllerDelegate>
+@interface NewWorldViewController : UIViewController <UITextFieldDelegate>
 {
     UITextField *worldTextField;
 }
 
-@property (strong, nonatomic) NSFetchedResultsController *fetchedResultsController;
 @property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 
 @property (nonatomic, retain) IBOutlet UITextField *worldTextField;

@@ -12,12 +12,11 @@
 
 #import "Games.h"
 
-@interface NewGameViewController : UIViewController <UITextFieldDelegate, NSFetchedResultsControllerDelegate>
+@interface NewGameViewController : UIViewController <UITextFieldDelegate>
 {
     UITextField *gameTextField;
 }
 
-@property (strong, nonatomic) NSFetchedResultsController *fetchedResultsController;
 @property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 
 @property (nonatomic, retain) IBOutlet UITextField *gameTextField;

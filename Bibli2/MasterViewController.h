@@ -11,6 +11,7 @@
 #import <CoreData/CoreData.h>
 
 #import "WorldViewController.h"
+#import "NewGameViewController.h"
 #import "Games.h"
 
 @interface MasterViewController : UITableViewController <NSFetchedResultsControllerDelegate>
