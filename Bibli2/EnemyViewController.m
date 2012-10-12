@@ -1,18 +1,18 @@
 //
-//  LevelViewController.m
+//  EnemyViewController.m
 //  Bibli2
 //
 //  Created by Youri van der Lans on 10/12/12.
 //  Copyright (c) 2012 Youri van der Lans. All rights reserved.
 //
 
-#import "LevelViewController.h"
+#import "EnemyViewController.h"
 
-@interface LevelViewController ()
+@interface EnemyViewController ()
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath;
 @end
 
-@implementation LevelViewController
+@implementation EnemyViewController
 
 - (void)awakeFromNib
 {
@@ -32,9 +32,6 @@
 {
     [super viewDidLoad];
 	
-//    id appDelegate = (id)[[UIApplication sharedApplication] delegate];
-//    self.managedObjectContext = [appDelegate managedObjectContext];
-    
     [self fetchedResultsController];
 }
 
@@ -94,25 +91,13 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    if ([[segue identifier] isEqualToString:@"New Level"]) {
-        NewLevelViewController *newLevelViewController = segue.destinationViewController;
-        newLevelViewController.managedObjectContext = self.managedObjectContext;
+    if ([[segue identifier] isEqualToString:@"New Enemy"]) {
+        NewEnemyViewController *newEnemyViewController = segue.destinationViewController;
+        newEnemyViewController.managedObjectContext = self.managedObjectContext;
         
-        NSLog(@"Passing selected world (%@) to NewLevelViewController", self.world.name);
-        newLevelViewController.world = self.world;
+        NSLog(@"Passing selected level (%@) to NewEnemyViewController", self.level.name);
+        newEnemyViewController.level = self.level;
     }
-    if ([[segue identifier] isEqualToString:@"Show Enemies"]) {
-        EnemyViewController *enemyViewController = segue.destinationViewController;
-        enemyViewController.managedObjectContext = self.managedObjectContext;
-        
-        // Store selected Level in selectedLevel property
-        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-        self.selectedLevel = [self.fetchedResultsController objectAtIndexPath:indexPath];
-        
-        NSLog(@"Passing selected level (%@) to EnemyViewController", self.selectedLevel.name);
-        enemyViewController.level = self.selectedLevel;
-    }
-
 }
 
 #pragma mark - Fetched results controller
@@ -125,9 +110,9 @@
     
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
     // Edit the entity name as appropriate.
-    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Levels" inManagedObjectContext:self.managedObjectContext];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Enemies" inManagedObjectContext:self.managedObjectContext];
     [fetchRequest setEntity:entity];
-    [fetchRequest setPredicate:[NSPredicate predicateWithFormat:@"world == %@", self.world]];
+    [fetchRequest setPredicate:[NSPredicate predicateWithFormat:@"level == %@", self.level]];
     
     // Set the batch size to a suitable number.
     [fetchRequest setFetchBatchSize:20];

@@ -30,6 +30,8 @@
 		DAAC2FB11626DFCD0034B2C0 /* Games.m in Sources */ = {isa = PBXBuildFile; fileRef = DAAC2FB01626DFCD0034B2C0 /* Games.m */; };
 		DAAC563C16280E0B0050956B /* NewLevelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAAC563B16280E0B0050956B /* NewLevelViewController.m */; };
 		DAAC563F16280EF30050956B /* LevelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAAC563E16280EF30050956B /* LevelViewController.m */; };
+		DAAC5647162815A80050956B /* EnemyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAAC5646162815A80050956B /* EnemyViewController.m */; };
+		DAAC564A162819E50050956B /* NewEnemyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAAC5649162819E50050956B /* NewEnemyViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -71,6 +73,10 @@
 		DAAC563B16280E0B0050956B /* NewLevelViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewLevelViewController.m; sourceTree = "<group>"; };
 		DAAC563D16280EEB0050956B /* LevelViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LevelViewController.h; sourceTree = "<group>"; };
 		DAAC563E16280EF30050956B /* LevelViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LevelViewController.m; sourceTree = "<group>"; };
+		DAAC5644162815700050956B /* EnemyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnemyViewController.h; sourceTree = "<group>"; };
+		DAAC5646162815A80050956B /* EnemyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EnemyViewController.m; sourceTree = "<group>"; };
+		DAAC5648162819DB0050956B /* NewEnemyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewEnemyViewController.h; sourceTree = "<group>"; };
+		DAAC5649162819E50050956B /* NewEnemyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewEnemyViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,12 +136,16 @@
 				DA344365162423A100AF07DD /* WorldViewController.m */,
 				DAAC563D16280EEB0050956B /* LevelViewController.h */,
 				DAAC563E16280EF30050956B /* LevelViewController.m */,
+				DAAC5644162815700050956B /* EnemyViewController.h */,
+				DAAC5646162815A80050956B /* EnemyViewController.m */,
 				DA79C373161EEE9700F4D2AC /* NewGameViewController.h */,
 				DA79C374161EEE9700F4D2AC /* NewGameViewController.m */,
 				DA344368162426AC00AF07DD /* NewWorldViewController.h */,
 				DA344369162426AC00AF07DD /* NewWorldViewController.m */,
 				DAAC563A16280E020050956B /* NewLevelViewController.h */,
 				DAAC563B16280E0B0050956B /* NewLevelViewController.m */,
+				DAAC5648162819DB0050956B /* NewEnemyViewController.h */,
+				DAAC5649162819E50050956B /* NewEnemyViewController.m */,
 				DA79C365161EEBCD00F4D2AC /* Bibli2.xcdatamodeld */,
 				DAAC2FAF1626DFCD0034B2C0 /* Games.h */,
 				DAAC2FB01626DFCD0034B2C0 /* Games.m */,
@@ -244,6 +254,8 @@
 				DAAC2FB11626DFCD0034B2C0 /* Games.m in Sources */,
 				DAAC563C16280E0B0050956B /* NewLevelViewController.m in Sources */,
 				DAAC563F16280EF30050956B /* LevelViewController.m in Sources */,
+				DAAC5647162815A80050956B /* EnemyViewController.m in Sources */,
+				DAAC564A162819E50050956B /* NewEnemyViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

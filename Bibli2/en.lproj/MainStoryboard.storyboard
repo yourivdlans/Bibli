@@ -60,7 +60,7 @@
                     <navigationItem key="navigationItem" title="Games" id="36">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="m8X-gP-SFC">
                             <connections>
-                                <segue destination="zfR-6A-0nf" kind="push" id="a70-Pb-eRV"/>
+                                <segue destination="zfR-6A-0nf" kind="push" identifier="New Game" id="a70-Pb-eRV"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -96,7 +96,7 @@
                         </connections>
                     </view>
                     <navigationItem key="navigationItem" title="New game" id="onO-H1-bgr">
-                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="done" id="XbC-Bb-eHo">
+                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="save" id="XbC-Bb-eHo">
                             <connections>
                                 <action selector="insertNewGame:" destination="zfR-6A-0nf" id="wEG-jk-6g9"/>
                             </connections>
@@ -139,7 +139,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="New world" id="8qp-fN-e2p">
-                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="done" id="tE3-II-dSd">
+                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="save" id="tE3-II-dSd">
                             <connections>
                                 <action selector="insertNewWorld:" destination="Luj-nm-FLP" id="Vt4-8N-6q6"/>
                             </connections>
@@ -202,7 +202,6 @@
         <!--Level View Controller - Levels-->
         <scene sceneID="UOf-cv-2SJ">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="uLZ-01-Qt6" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController id="en6-7a-HNo" customClass="LevelViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="BAP-ku-CEO">
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
@@ -242,23 +241,24 @@
                         </barButtonItem>
                     </navigationItem>
                 </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uLZ-01-Qt6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1397" y="64"/>
         </scene>
-        <!--Table View Controller - Enemies-->
+        <!--Enemy View Controller - Enemies-->
         <scene sceneID="SGG-pd-5im">
             <objects>
-                <tableViewController id="xCb-wM-240" sceneMemberID="viewController">
+                <tableViewController id="xCb-wM-240" customClass="EnemyViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="pJY-Oa-2mY">
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="6WA-k4-ZyE" style="IBUITableViewCellStyleDefault" id="fFW-7O-Yec">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="6WA-k4-ZyE" style="IBUITableViewCellStyleDefault" id="fFW-7O-Yec">
                                 <rect key="frame" x="0.0" y="22" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="300" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6WA-k4-ZyE">
@@ -277,7 +277,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Enemies" id="XGP-ND-jV0">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="JbO-n7-rwc"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="JbO-n7-rwc">
+                            <connections>
+                                <segue destination="gQc-fm-64h" kind="push" identifier="New Enemy" id="9L2-4f-IHy"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yRq-f9-UpZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -287,7 +291,6 @@
         <!--New Level View Controller - New level-->
         <scene sceneID="Tks-Ik-ika">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="mbu-59-fdS" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="r8c-Wz-8jF" customClass="NewLevelViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nDD-sN-jJC">
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
@@ -312,7 +315,7 @@
                         </connections>
                     </view>
                     <navigationItem key="navigationItem" title="New level" id="HYk-qP-vjI">
-                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="done" id="lsM-MR-imU">
+                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="save" id="lsM-MR-imU">
                             <connections>
                                 <action selector="insertNewLevel:" destination="r8c-Wz-8jF" id="tB0-f2-0Mk"/>
                             </connections>
@@ -322,6 +325,7 @@
                         <outlet property="levelTextField" destination="9DW-PY-dHM" id="3ha-Sd-PvK"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mbu-59-fdS" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="JkV-6d-JcJ">
                     <connections>
                         <outlet property="delegate" destination="r8c-Wz-8jF" id="pEN-Cr-Xbt"/>
@@ -330,8 +334,57 @@
             </objects>
             <point key="canvasLocation" x="1882" y="-619"/>
         </scene>
+        <!--New Enemy View Controller - New enemy-->
+        <scene sceneID="bry-Pl-d5c">
+            <objects>
+                <viewController id="gQc-fm-64h" customClass="NewEnemyViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xuU-2V-Kve">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enemy" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dV3-Ix-IPs">
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="gQc-fm-64h" id="ICe-9c-YGO"/>
+                                </connections>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="dV3-Ix-IPs" firstAttribute="leading" secondItem="xuU-2V-Kve" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="JhZ-Z9-vaV"/>
+                            <constraint firstItem="dV3-Ix-IPs" firstAttribute="top" secondItem="xuU-2V-Kve" secondAttribute="top" constant="20" symbolic="YES" type="default" id="OG6-Mc-ACi"/>
+                            <constraint firstAttribute="trailing" secondItem="dV3-Ix-IPs" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="Xpk-7N-v6Y"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="X7Z-rU-SRV" appends="YES" id="0PT-hL-Xmr"/>
+                        </connections>
+                    </view>
+                    <navigationItem key="navigationItem" title="New enemy" id="Shi-Dy-dag">
+                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="save" id="zZp-Qc-6EO">
+                            <connections>
+                                <action selector="insertNewEnemy:" destination="gQc-fm-64h" id="qzQ-8o-pEr"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="enemyTextField" destination="dV3-Ix-IPs" id="i5j-6h-N5X"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CYd-tr-Jlf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="X7Z-rU-SRV">
+                    <connections>
+                        <outlet property="delegate" destination="gQc-fm-64h" id="AvC-KM-Dzh"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="2378" y="-619"/>
+        </scene>
     </scenes>
     <classes>
+        <class className="EnemyViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/EnemyViewController.h"/>
+        </class>
         <class className="LevelViewController" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/LevelViewController.h"/>
         </class>
@@ -340,6 +393,13 @@
         </class>
         <class className="NSLayoutConstraint" superclassName="NSObject">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="NewEnemyViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NewEnemyViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="insertNewEnemy:"/>
+                <relationship kind="outlet" name="enemyTextField" candidateClass="UITextField"/>
+            </relationships>
         </class>
         <class className="NewGameViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/NewGameViewController.h"/>

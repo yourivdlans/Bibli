@@ -1,5 +1,5 @@
 //
-//  LevelViewController.h
+//  EnemyViewController.h
 //  Bibli2
 //
 //  Created by Youri van der Lans on 10/12/12.
@@ -10,18 +10,16 @@
 
 #import <CoreData/CoreData.h>
 
-#import "NewLevelViewController.h"
-#import "EnemyViewController.h"
+#import "NewEnemyViewController.h"
 
-#import "Worlds.h"
 #import "Levels.h"
+#import "Enemies.h"
 
-@interface LevelViewController : UITableViewController <NSFetchedResultsControllerDelegate>
+@interface EnemyViewController : UITableViewController <NSFetchedResultsControllerDelegate>
 
 @property (strong, nonatomic) NSFetchedResultsController *fetchedResultsController;
 @property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 
-@property (strong, nonatomic) Worlds *world;
-@property (strong, nonatomic) Levels *selectedLevel;
+@property (strong, nonatomic) Levels *level;
 
 @end
