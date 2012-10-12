@@ -28,6 +28,8 @@
 		DAAC2FAB1626DFCD0034B2C0 /* Worlds.m in Sources */ = {isa = PBXBuildFile; fileRef = DAAC2FAA1626DFCD0034B2C0 /* Worlds.m */; };
 		DAAC2FAE1626DFCD0034B2C0 /* Enemies.m in Sources */ = {isa = PBXBuildFile; fileRef = DAAC2FAD1626DFCD0034B2C0 /* Enemies.m */; };
 		DAAC2FB11626DFCD0034B2C0 /* Games.m in Sources */ = {isa = PBXBuildFile; fileRef = DAAC2FB01626DFCD0034B2C0 /* Games.m */; };
+		DAAC563C16280E0B0050956B /* NewLevelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAAC563B16280E0B0050956B /* NewLevelViewController.m */; };
+		DAAC563F16280EF30050956B /* LevelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAAC563E16280EF30050956B /* LevelViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -65,6 +67,10 @@
 		DAAC2FAD1626DFCD0034B2C0 /* Enemies.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Enemies.m; sourceTree = "<group>"; };
 		DAAC2FAF1626DFCD0034B2C0 /* Games.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Games.h; sourceTree = "<group>"; };
 		DAAC2FB01626DFCD0034B2C0 /* Games.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Games.m; sourceTree = "<group>"; };
+		DAAC563A16280E020050956B /* NewLevelViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewLevelViewController.h; sourceTree = "<group>"; };
+		DAAC563B16280E0B0050956B /* NewLevelViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewLevelViewController.m; sourceTree = "<group>"; };
+		DAAC563D16280EEB0050956B /* LevelViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LevelViewController.h; sourceTree = "<group>"; };
+		DAAC563E16280EF30050956B /* LevelViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LevelViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,10 +128,14 @@
 				DA79C36C161EEBCD00F4D2AC /* DetailViewController.m */,
 				DA344364162423A100AF07DD /* WorldViewController.h */,
 				DA344365162423A100AF07DD /* WorldViewController.m */,
+				DAAC563D16280EEB0050956B /* LevelViewController.h */,
+				DAAC563E16280EF30050956B /* LevelViewController.m */,
 				DA79C373161EEE9700F4D2AC /* NewGameViewController.h */,
 				DA79C374161EEE9700F4D2AC /* NewGameViewController.m */,
 				DA344368162426AC00AF07DD /* NewWorldViewController.h */,
 				DA344369162426AC00AF07DD /* NewWorldViewController.m */,
+				DAAC563A16280E020050956B /* NewLevelViewController.h */,
+				DAAC563B16280E0B0050956B /* NewLevelViewController.m */,
 				DA79C365161EEBCD00F4D2AC /* Bibli2.xcdatamodeld */,
 				DAAC2FAF1626DFCD0034B2C0 /* Games.h */,
 				DAAC2FB01626DFCD0034B2C0 /* Games.m */,
@@ -232,6 +242,8 @@
 				DAAC2FAB1626DFCD0034B2C0 /* Worlds.m in Sources */,
 				DAAC2FAE1626DFCD0034B2C0 /* Enemies.m in Sources */,
 				DAAC2FB11626DFCD0034B2C0 /* Games.m in Sources */,
+				DAAC563C16280E0B0050956B /* NewLevelViewController.m in Sources */,
+				DAAC563F16280EF30050956B /* LevelViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

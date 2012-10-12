@@ -177,6 +177,9 @@
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
+                                <connections>
+                                    <segue destination="en6-7a-HNo" kind="push" identifier="Show Levels" id="YWp-aB-qzP"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -196,7 +199,173 @@
             </objects>
             <point key="canvasLocation" x="925" y="64"/>
         </scene>
+        <!--Level View Controller - Levels-->
+        <scene sceneID="UOf-cv-2SJ">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uLZ-01-Qt6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tableViewController id="en6-7a-HNo" customClass="LevelViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="BAP-ku-CEO">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="o4M-gj-lG1" style="IBUITableViewCellStyleDefault" id="r5b-pj-FtC">
+                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="300" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o4M-gj-lG1">
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <connections>
+                                    <segue destination="xCb-wM-240" kind="push" identifier="Show Enemies" id="MuU-SJ-84U"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="en6-7a-HNo" id="ewE-98-HPs"/>
+                            <outlet property="delegate" destination="en6-7a-HNo" id="D5d-0C-eIr"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Levels" id="0r6-u6-OtO">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="igP-uE-XLs">
+                            <connections>
+                                <segue destination="r8c-Wz-8jF" kind="push" identifier="New Level" id="wsj-HT-cxh"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+            </objects>
+            <point key="canvasLocation" x="1397" y="64"/>
+        </scene>
+        <!--Table View Controller - Enemies-->
+        <scene sceneID="SGG-pd-5im">
+            <objects>
+                <tableViewController id="xCb-wM-240" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="pJY-Oa-2mY">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="6WA-k4-ZyE" style="IBUITableViewCellStyleDefault" id="fFW-7O-Yec">
+                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="300" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6WA-k4-ZyE">
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="xCb-wM-240" id="5aI-kT-SUW"/>
+                            <outlet property="delegate" destination="xCb-wM-240" id="2v6-wD-3eX"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Enemies" id="XGP-ND-jV0">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="JbO-n7-rwc"/>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yRq-f9-UpZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1882" y="64"/>
+        </scene>
+        <!--New Level View Controller - New level-->
+        <scene sceneID="Tks-Ik-ika">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mbu-59-fdS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="r8c-Wz-8jF" customClass="NewLevelViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nDD-sN-jJC">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Level" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9DW-PY-dHM">
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                <connections>
+                                    <outlet property="delegate" destination="r8c-Wz-8jF" id="ZYm-9z-45g"/>
+                                </connections>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="9DW-PY-dHM" firstAttribute="top" secondItem="nDD-sN-jJC" secondAttribute="top" constant="20" symbolic="YES" type="default" id="6Du-sF-arB"/>
+                            <constraint firstItem="9DW-PY-dHM" firstAttribute="leading" secondItem="nDD-sN-jJC" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="nB9-B7-t7Q"/>
+                            <constraint firstAttribute="trailing" secondItem="9DW-PY-dHM" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="wSm-hm-alZ"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="JkV-6d-JcJ" appends="YES" id="PUK-yB-yAx"/>
+                        </connections>
+                    </view>
+                    <navigationItem key="navigationItem" title="New level" id="HYk-qP-vjI">
+                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="done" id="lsM-MR-imU">
+                            <connections>
+                                <action selector="insertNewLevel:" destination="r8c-Wz-8jF" id="tB0-f2-0Mk"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="levelTextField" destination="9DW-PY-dHM" id="3ha-Sd-PvK"/>
+                    </connections>
+                </viewController>
+                <tapGestureRecognizer id="JkV-6d-JcJ">
+                    <connections>
+                        <outlet property="delegate" destination="r8c-Wz-8jF" id="pEN-Cr-Xbt"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="1882" y="-619"/>
+        </scene>
     </scenes>
+    <classes>
+        <class className="LevelViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/LevelViewController.h"/>
+        </class>
+        <class className="MasterViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MasterViewController.h"/>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="NewGameViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NewGameViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="insertNewGame:"/>
+                <relationship kind="outlet" name="gameTextField" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+        <class className="NewLevelViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NewLevelViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="insertNewLevel:"/>
+                <relationship kind="outlet" name="levelTextField" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+        <class className="NewWorldViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NewWorldViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="insertNewWorld:"/>
+                <relationship kind="outlet" name="worldTextField" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+        <class className="WorldViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/WorldViewController.h"/>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

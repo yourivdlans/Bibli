@@ -1,18 +1,18 @@
 //
-//  WorldViewController.m
+//  LevelViewController.m
 //  Bibli2
 //
-//  Created by Youri van der Lans on 10/9/12.
+//  Created by Youri van der Lans on 10/12/12.
 //  Copyright (c) 2012 Youri van der Lans. All rights reserved.
 //
 
-#import "WorldViewController.h"
+#import "LevelViewController.h"
 
-@interface WorldViewController ()
+@interface LevelViewController ()
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath;
 @end
 
-@implementation WorldViewController
+@implementation LevelViewController
 
 - (void)awakeFromNib
 {
@@ -94,23 +94,12 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    if ([[segue identifier] isEqualToString:@"New World"]) {
-        NewWorldViewController *newWorldViewController = segue.destinationViewController;
-        newWorldViewController.managedObjectContext = self.managedObjectContext;
+    if ([[segue identifier] isEqualToString:@"New Level"]) {
+        NewLevelViewController *newLevelViewController = segue.destinationViewController;
+        newLevelViewController.managedObjectContext = self.managedObjectContext;
         
-        NSLog(@"Passing selected game (%@) to NewWorldViewController", self.game.name);
-        newWorldViewController.game = self.game;
-    }
-    if ([[segue identifier] isEqualToString:@"Show Levels"]) {
-        LevelViewController *levelViewController = segue.destinationViewController;
-        levelViewController.managedObjectContext = self.managedObjectContext;
-        
-        // Store selected Game in selectedGame property
-        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-        self.selectedWorld = [self.fetchedResultsController objectAtIndexPath:indexPath];
-        
-        NSLog(@"Passing selected world (%@) to LevelViewController", self.selectedWorld.name);
-        levelViewController.world = self.selectedWorld;
+        NSLog(@"Passing selected world (%@) to NewLevelViewController", self.world.name);
+        newLevelViewController.world = self.world;
     }
 }
 
@@ -124,9 +113,9 @@
     
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
     // Edit the entity name as appropriate.
-    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Worlds" inManagedObjectContext:self.managedObjectContext];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Levels" inManagedObjectContext:self.managedObjectContext];
     [fetchRequest setEntity:entity];
-    [fetchRequest setPredicate:[NSPredicate predicateWithFormat:@"game == %@", self.game]];
+    [fetchRequest setPredicate:[NSPredicate predicateWithFormat:@"world == %@", self.world]];
     
     // Set the batch size to a suitable number.
     [fetchRequest setFetchBatchSize:20];
